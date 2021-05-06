@@ -1,4 +1,6 @@
 import scala.annotation.tailrec
+import scala.util.Try
+
 object Main {
 
   @tailrec
@@ -90,6 +92,16 @@ object Main {
       i2 <- f2
       i3 <- f3
     } yield i3(i2(i1(x)))
+  }
+
+  /**
+   * 04章初級課題
+   */
+  def createString(size: Int): Try[String] = {
+    Try {
+      require(size >= 0, "sizeはゼロ以上である必要があります")
+      (for (i <- 0 until size) yield "a").mkString
+    }
   }
 }
 
