@@ -4,6 +4,7 @@ class Calc {
    *
    * Intの最大を上回った際にはオーバーフローする
    */
+
   def sum(seq: Seq[Int]): Int = seq.foldLeft(0)(_ + _)
 
   /** 整数を2つ受け取り、分子を分母で割った浮動小数点の値を返す
