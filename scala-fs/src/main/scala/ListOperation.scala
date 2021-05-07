@@ -30,7 +30,7 @@ object ListOperation extends App{
   /**
    * 06章上級課題 模範回答
    * */
-  def split[A](n: Int, list: List[A]): (List[A], List[A]) = {
+  def split2[A](n: Int, list: List[A]): (List[A], List[A]) = {
     @tailrec
     def splitRec(index: Int, take: List[A], rest: List[A]): (List[A], List[A]) =
       (index, rest) match {
